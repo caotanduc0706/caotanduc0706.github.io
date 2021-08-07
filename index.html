@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tan Duc's Personal Site</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
+    <link rel="icon" href="./assets/img/favi/favicon.ico" />
+  </head>
+  <body>
+    <div id="header">
+      <ul id="nav">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#about">Thông tin</a></li>
+        <li><a href="#project">Dự án</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <div id="menu-btn">
+        <i class="ti-menu"></i>
+      </div>
+    </div>
+    <div id="home">
+      <div class="content">
+        <h2 class="slogan">Cột sống thú vị</h2>
+        <p>Nơi chia sẻ niềm vui và nỗi cười</p>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="about">
+        <h2>Nơi những thiết kế tồi tệ bắt đầu</h2>
+        <table class="table-infor" cellspacing="20">
+          <tr>
+            <td>
+              <img
+                src="./assets/img/pf.jpg"
+                alt="Cao Tan Duc picture"
+                class="profile-img"
+              />
+            </td>
+            <td style="text-align: left">
+              <p>-<strong>Cao Tấn Đức</strong></p>
+              <p>-US<em>er</em></p>
+              <p>-Kẻ hủy diệt <strong>cái đẹp</strong></p>
+            </td>
+          </tr>
+        </table>
+        <p class="quote">
+          "Nếu bạn có một cuộc đời thú vị, thay vì cười, thì bạn hãy nỡ niềm
+          vui, còn không thì hãy vào cái trang này và cười vào cái hình thù kỳ
+          lạ của nó"
+        </p>
+      </div>
+      <div id="project" style="background-color: #082032">
+        <div id="product"></div>
+      </div>
+    </div>
+    <div id="contact">
+      <h2>Liên lạc</h2>
+      <a href="mailto:caotanduc0706@gmail.com"
+        ><i class="contact-icon ti-email"></i
+      ></a>
+      <a href="https://www.facebook.com/tan.duc.92317/">
+        <i class="contact-icon ti-facebook"></i
+      ></a>
+      <a href="tel:0966233940"> <i class="contact-icon ti-mobile"></i></a>
+    </div>
+
+    <script>
+      var header = document.getElementById("header");
+      var btn = document.getElementById("menu-btn");
+      var height = header.clientHeight;
+      var home = document.getElementById("home");
+      var content = document.getElementById("content");
+      var contact = document.getElementById("contact");
+
+      home.onclick = function () {
+        if (header.clientHeight !== height) {
+          header.style.height = null;
+        }
+      };
+
+      content.onclick = function () {
+        if (header.clientHeight !== height) {
+          header.style.height = null;
+        }
+      };
+
+      contact.onclick = function () {
+        if (header.clientHeight !== height) {
+          header.style.height = null;
+        }
+      };
+      btn.onclick = function () {
+        if (header.clientHeight === height) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = null;
+        }
+      };
+
+      var menuItems = document.querySelectorAll("#header #nav li ");
+      for (const menuItem of menuItems) {
+        menuItem.onclick = function () {
+          header.style.height = null;
+        };
+      }
+    </script>
+  </body>
+</html>
