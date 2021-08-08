@@ -10,6 +10,9 @@
 
 /* moblie */
 @media (max-width: 740px) {
+  #home {
+    padding-bottom: calc(100% + 52px);
+  }
   #content td:first-child {
     width: 40%;
   }
